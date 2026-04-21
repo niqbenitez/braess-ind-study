@@ -5,22 +5,34 @@ Braess, D. (1968).
 \newblock {\"U}ber ein paradoxon aus der verkehrsplanung.
 \newblock {\em Unternehmensforschung}, 12(1):258--268.
 
-\bibitem[Cohen and Horowitz, 1991]{cohen1991}
-Cohen, J.~E. and Horowitz, P. (1991).
-\newblock Paradoxical effects of new links in pumping networks.
-\newblock {\em Nature}, 352(6337):699--701.
-
-\bibitem[Ducarme, Paul]{ducarme_projects_countersnapping_structure}
+\bibitem[Ducarme, ]{ducarme_projects_countersnapping_structure}
 Ducarme, P.
-\newblock Projects --- countersnapping structure.
-\newblock
- https://paulducarme.com/projects.html
+\newblock Projects - countersnapping structure.
 
-\bibitem[Paul~Ducarme, 2025]{pnas_supplement}
-Paul~Ducarme, Bart~Weber, M. v. H. J. T.~O. (2025).
-\newblock Supplementary materials for "pnas.2423301122".
-\newblock
- https://www.pnas.org/action/downloadSupplement?doi=10.1073%2Fpnas.2423301122&file=pnas.2423301122.sapp.pdf.
-\newblock Supplementary PDF for article DOI: 10.1073/pnas.2423301122.
+\bibitem[Hooke, 1678]{hooke1678spring}
+Hooke, R. (1678).
+\newblock {\em The True Theory of Elasticity or Springiness}.
+\newblock John Martyn, London.
+\newblock Often cited as the introduction of Hooke's law.
+
+\bibitem[Nagurney and Nagurney, 2016]{Nagurney2016Braess}
+Nagurney, L.~S. and Nagurney, A. (2016).
+\newblock Physical proof of the occurrence of the braess paradox in electrical
+  circuits.
+\newblock {\em EPL (Europhysics Letters)}.
+
+\bibitem[Pas and Principio, 1997]{pas1997braess}
+Pas, E.~I. and Principio, S.~L. (1997).
+\newblock Braess’ paradox: Some new insights.
+\newblock {\em Transportation Research Part B: Methodological}, 31(3):265--276.
+
+\bibitem[Penchina and Penchina, 2003]{penchina2003braess}
+Penchina, C.~M. and Penchina, L.~J. (2003).
+\newblock The braess paradox in mechanical, traffic, and other networks.
+\newblock {\em American Journal of Physics}, 71(5):479--482.
+
+\bibitem[{Veritasium}, 2025]{veritasium_countersnapping_2025}
+{Veritasium} (2025).
+\newblock This mechanism shrinks when pulled.
 
 \end{thebibliography}
