@@ -4,4 +4,9 @@
 \contentsline {section}{\numberline {2}My process}{2}{}%
 \contentsline {subsection}{\numberline {2.1}Printing}{2}{}%
 \contentsline {subsection}{\numberline {2.2}Assembly}{2}{}%
+\contentsline {subsection}{\numberline {2.3}Problems encountered}{2}{}%
 \contentsline {section}{\numberline {3}Testing Hooke's law edition of Braess' paradox}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Theoretically}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Experiment Procedures}{4}{}%
+\contentsline {section}{\numberline {4}Conclusion}{5}{}%
+\contentsline {subsection}{\numberline {4.1}Future experimentation}{6}{}%
