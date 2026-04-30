@@ -52,6 +52,22 @@ When Braess's Paradox occurs, adding an edge increases the cost of the Nash Equi
 	PoA = \frac{\textbf{Cost of Nash Equilibrium}}{\textbf{Cost of Social Optimum}}
 \end{equation}
 
+The Price of Anarchy (PoA) is a key metric in game theory and network economics, quantifying the inefficiency arising from selfish behavior in systems where individuals optimize their own outcomes rather than the collective good. In the context of Braess's Paradox, PoA measures the ratio of system performance under Nash Equilibrium (where no agent can unilaterally improve their payoff) versus the Social Optimum (the globally efficient state). A PoA greater than 1 indicates inefficiency, with higher values reflecting worse outcomes due to paradoxical effects like adding capacity reducing performance.
+
+In the mechanical spring-based model of Braess's Paradox, we adapt this concept to Hooke's Law, where "cost" represents the system's displacement (stretch distance) under a fixed applied force. Displacement is an appropriate cost proxy because it directly reflects energy expenditure or "performance degradation"—a stiffer system (lower displacement) performs better. The paradox manifests when adding the short connecting string enables a transition to a less stiff (parallel) configuration, increasing displacement despite the apparent extra support.
+
+
+\subsubsection{Numerical Example with Experimental Data}
+Using the experimental snap threshold from Table \ref{tab:mass_distance} (\(F \approx 3.1 \, \textbf{mN} = 0.0031 \, \textbf{N}\)):
+- \(d_{\textbf{SO}} = \frac{0.0031}{130.87} \approx 0.0237 \, \textbf{mm}\)
+- \(d_{\textbf{NE}} = \frac{0.0031}{54.25} \approx 0.0572 \, \textbf{mm}\)
+- \(\textbf{PoA} = \frac{0.0572}{0.0237} \approx 2.41\)
+
+This matches your graph (Figure \ref{fig:experiment_graph}), where the snapped configuration plateaus at higher displacement. In theory, the SO remains unchanged, but real-world factors (e.g., TPU's elasticity) cause slight deviations, yet the core inefficiency persists.
+
+\subsubsection{Interpretation and Broader Implications}
+A PoA of 2.41 implies the system is 141\% less efficient under selfish behavior, validating Braess's Paradox in mechanics. This parallels traffic networks, where adding a road increases congestion. Future extensions could compute PoA for electrical analogs (e.g., resistance in circuits), where cost is voltage drop or power loss, potentially yielding similar ratios. Such analyses highlight how Braess's Paradox transcends domains, urging designs that mitigate selfish equilibria.
+
 \section{My process}
 
 The creator of the mechanism, Paul Ducarme, mentions on his project website that the initial model was cast with silicone in a printed mold. I chose to print the models directly as that allows time in my independant study to have quick prototypes so it doesn't require reprinting and waiting for silicone to cure.
@@ -239,11 +255,41 @@ Braess's paradox occurs when adding a new element (like a road or spring in para
 
 The parallel configuration should be stiffer because it has a higher k value, but the unsnapped resting distance of 79 mm vs. snapped resting distance of 90 mm means the mechanism actually becomes less stiff. This make it not exactly a good example of Braess's paradox in action, but still has potential for future developement as this would be what I consider, entirely human error.
 
+\subsection{Calculating the Price of Anarchy}
+
+Social Optimum (SO): This is the baseline configuration without the added edge (short string). The springs remain in an effective series arrangement, yielding a higher effective spring constant \(k_{\textbf{unsnapped}} = 130.87 \, \frac{N}{m}\). For a fixed force \(F\), the displacement is minimized:
+\[
+d_{\textbf{SO}} = \frac{F}{k_{\textbf{unsnapped}}}
+\]
+Here, agents could theoretically coordinate to avoid the snap, maintaining optimal stiffness.
+
+Nash Equilibrium (NE): With the added edge, selfish "agents" (the springs and strings) redistribute load to locally optimize tension. This triggers the snap to a parallel configuration with \(k_{\textbf{snapped}} = 54.25 \, \frac{N}{m}\), resulting in greater displacement:
+\[
+d_{\textbf{NE}} = \frac{F}{k_{\textbf{snapped}}}
+\]
+No individual spring can improve its tension by switching back, as the system stabilizes in this suboptimal state.
+
+\subsubsection{Derivation of PoA}
+The PoA formula is:
+\[
+\textbf{PoA} = \frac{\textbf{Cost of Nash Equilibrium}}{\textbf{Cost of Social Optimum}} = \frac{d_{\textbf{NE}}}{d_{\textbf{SO}}}
+\]
+Substituting the displacement equations:
+\[
+\textbf{PoA} = \frac{\frac{F}{k_{\textbf{snapped}}}}{\frac{F}{k_{\textbf{unsnapped}}}} = \frac{k_{\textbf{unsnapped}}}{k_{\textbf{snapped}}}
+\]
+The force \(F\) cancels out, yielding:
+\[
+\textbf{PoA} = \frac{130.87}{54.25} \approx 2.41
+\]
+This ratio exceeds 1 because \(k_{\textbf{snapped}} < k_{\textbf{unsnapped}}\), meaning the snapped state is less efficient (more displacement for the same force). The paradox arises because adding the string (extra "capacity") worsens the NE without altering the SO.
+
 \section{Conclusion}
 
 This investigation explored the countersnapping mechanism as a mechanical manifestation of Braess's paradox, demonstrating how a system can behave counterintuitively when its configuration changes. The observed mechanism composed of springs in series can transition to a parallel configuration, fundamentally altering its response to applied force. While the prototype did not achieve the idealized behavior predicted by theory due to material limitations and design constraints, it successfully illustrated the snap-through transition and provided empirical evidence of configuration-dependent stiffness.
 
 The experimental data in Table \ref{tab:mass_distance} revealed that the mechanism exhibits a sharp transition at approximately 3.1 mN of applied force, transitioning from the unsnapped to snapped state and plateauing at a maximum extension of 97 mm. This behavior, though not perfectly aligned with theoretical predictions, validates the fundamental principle that mechanical systems can exhibit paradoxical responses when structural constraints change.
+
 
 \subsection{Future experimentation}
 This phenomina is experienced in a wide range of fields such as electron movement, logistics, and fluids to name a few. 
